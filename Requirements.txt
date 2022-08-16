@@ -1,0 +1,42 @@
+c.v page:
+1.load html template from database
+2.scan the html:
+  -find all elements with class builder-edit (normal input) and replace them with input elements
+  -find all elements with class builder-image and add an absolute element to its container to allow the user to upload an image
+  -find all elements with class builder-section and add the ability to remove it or add another section (add another section will show a popup to allow the user to enter the name of the section and the inputs there)
+  -Note: builder-section should have the builder-edit items as children directly
+- there should be one container represents the page container and should have the id #builder-page-container (that container should have a button for the user to add a new page 
+  - all pages execpt the first page should have the class of builder-other-page
+  - section container should have the class builder-section-container
+
+template-creator page:
+1.provide the html for the template page and html for the other pages
+
+
+user stories:
+-as a template creator i want to be able to see my list of created templates
+-as a template creator i want to be able to add new template and publish it
+
+-as a normal user i want to be able to see the list of templates
+-as a nomral user i want to be able to choose a template to edit it and customize it for creating my c.v
+-as a normal user i want to be able to export my c.v as pdf with right A4 paper dimensions
+-as a user i want to be to save my work to any c.v so that i can come back to it later
+-as a user i want to be able to see the list of the c.vs that i edited so that i can choose anyone to edit.
+
+objects:
+user
+template
+cv
+
+relations:
+template creator has many templates
+normal user has many cvs
+
+tech stack:
+.net 6.0
+database first ef core
+psql
+html
+css
+js
+bootstrap
